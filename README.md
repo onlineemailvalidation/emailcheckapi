@@ -1,1 +1,1 @@
-# emailcheckapi
+Api for checking email for EmailCheckBumm online email validation service (http://onlineemailvalidation.com/)
