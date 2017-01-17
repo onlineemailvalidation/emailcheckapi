@@ -4,7 +4,6 @@ namespace EmailCheckBumm;
 
 use EmailCheckBumm\Component\CURLService;
 
-
 class EmailCheckBummApi
 {
 
@@ -40,13 +39,13 @@ class EmailCheckBummApi
         if(is_array($tests))
         {
             foreach ($tests as $t) {
-                if(!in_array($t, self::$TEST_NAMES)) {
+                if(!isset(self::$TEST_NAMES[$t])) {
                     throw new \InvalidArgumentException(sprintf("%s is not a valid test name!", $t));
                 }
                 $_tests[] = $t;
             }
         } else {
-            if(!in_array((string)$t, self::$TEST_NAMES)) {
+            if(!isset(self::$TEST_NAMES[(string)$test])) {
                 throw new \InvalidArgumentException(sprintf("%s is not a valid test name!", $t));
             }
             $_tests[] = $t;
@@ -79,13 +78,13 @@ class EmailCheckBummApi
         if(is_array($tests))
         {
             foreach ($tests as $t) {
-                if(!in_array($t, self::$TEST_NAMES)) {
+                if(!isset(self::$TEST_NAMES[$t])) {
                     throw new \InvalidArgumentException(sprintf("%s is not a valid test name!", $t));
                 }
                 $_tests[] = $t;
             }
         } else {
-            if(!in_array((string)$t, self::$TEST_NAMES)) {
+            if(!isset(self::$TEST_NAMES[(string)$test])) {
                 throw new \InvalidArgumentException(sprintf("%s is not a valid test name!", $t));
             }
             $_tests[] = $t;
@@ -94,7 +93,7 @@ class EmailCheckBummApi
         $payload = json_encode(
             array(
                 "apikey" => $this->apiKey,
-                "domain" => $domain,
+                "email" => $domain,
                 "tests" => $_tests
             )
         );
