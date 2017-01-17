@@ -5,20 +5,16 @@
     "keywords": ["EmailCheckBumm","email check","email service","tempmail","email validation"],
     "license": "MIT",
     "type": "library",
-    "require": {},
+    "require": {
+        "php": ">=5.0"
+    },
     "autoload": {
         "psr-4": {
-            "Api\\": "src"
+            "EmailCheckBumm\\": "src"
         }
     },
     "minimum-stability": "stable",
-    "extra": {
-    },
-    "scripts": {
-        "run": [
-        ]
-    },
-    "config": {
-        "bin-dir": "bin"
-    }
+    "extra": {},
+    "scripts": {},
+    "config": {}
 }
