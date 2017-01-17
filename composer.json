@@ -1,0 +1,24 @@
+{
+    "name": "onlineemailvalidation/emailcheckapi",
+    "description": "Api for checking email for EmailCheckBumm online email validation service",
+    "homepage": "http://onlineemailvalidation.com",
+    "keywords": ["EmailCheckBumm","email check","email service","tempmail","email validation"],
+    "license": "MIT",
+    "type": "library",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Api\\": "src"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+    },
+    "scripts": {
+        "run": [
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
